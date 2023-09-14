@@ -1,0 +1,321 @@
+
+*, *::before, *::after {
+    margin:0 ;
+    padding:0 ;
+    box-sizing: border-box ;
+}
+
+
+
+:root{
+    --responsive-fonts: calc(15px + 0.390625vw);
+    --responsive-fonts-big: calc(15px + 3.890625vw);
+    --neon-blue: #1F66FF;
+    --resolution-blue:#00277A;
+    --white: #FFFFFF;
+    --background-white:#F5F5F5;
+    --red: #D72638;
+    --blue-gradient: linear-gradient(90deg,#1F66FF,#00277A);
+    --black: #050505;
+}
+html,
+body {
+    font-size: var(--responsive-fonts);
+    width: 100%;
+}
+body {
+    background: var(--background-white) ;
+    font-family: 'Open Sans', sans-serif;
+
+}
+h1 {
+    font-size: var(--responsive-fonts-big);
+}
+p{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 300;
+}
+a {
+    text-decoration: none;
+}
+
+
+.logo{
+    width: 100px;
+    margin-left: 20%;
+}
+
+footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: var(--black);
+    color: var(--white);
+
+}
+.footer-logo{
+    max-width:100px;
+}
+
+ footer a {
+    font-size: calc(15px + 0.590625vw);
+    font-weight: 900;
+    color: var(--white);
+    /* display: block; */
+    width: 10ch;
+    transition: all 0.3s ease 0s;
+}
+footer a:hover{
+    color: var(--resolution-blue);
+}
+
+
+
+
+
+
+
+
+header{
+    background-image: url("../images/software-developer.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 35vh;
+}
+header h1{
+    color: var(--white);
+    text-align: center;
+    padding: 150px 0;
+
+}
+
+
+.nav-container{
+    position: relative;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 16px 0px;
+    top:0px;
+}
+
+.active{
+    color: var(--red);
+}
+
+
+nav{
+    position: absolute;
+    /* width: 100%; */
+}
+
+nav,
+#menu-checkbox,
+#menu-checkbox-icons .humburger-icon-opened{
+    display: none;
+}
+nav a {
+    font-size: calc(15px + 0.590625vw);
+    font-weight: 900;
+    color: var(--white);
+    display: block;
+    width: 10ch;
+    transition: all 0.3s ease 0s;
+}
+nav a:hover{
+    color: var(--resolution-blue);
+}
+#menu-checkbox-icons{
+    font-size: 42px;
+    margin-right:10%;
+    color: var(--white);
+    background-color: var(--neon-blue);
+    padding: 8px 16px;
+    border-radius: 50%;
+}
+/* #menu-checkbox-icons i{ */
+/*     font-size:42px; */
+/*     color: var(--vanilla); */
+/*     margin-right:10%; */
+/* } */
+
+#menu-checkbox:checked ~ nav{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 24px;
+    top:138px;
+    padding-bottom: 16px;
+    width:100%;
+
+}
+
+#menu-checkbox:checked ~ #menu-checkbox-icons .humburger-icon {
+    display: none;
+}
+
+#menu-checkbox:checked ~  #menu-checkbox-icons .humburger-icon-opened {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:800px) {
+
+    /* Nav */
+    .nav-container {
+        justify-content: space-between;
+        gap: 15%;
+
+    }
+
+    #menu-checkbox:checked ~ .humburger-icon-opened {
+        display:none;
+    }
+
+    nav,
+    #menu-checkbox:checked ~ nav{
+        position: relative;
+        /* width:auto; */
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap:48px;
+        /* gap: 16px; */
+        top: 0px;
+        padding-bottom: 0px;
+    }
+    .nav-container{
+        padding: 24px 0px;
+    }
+
+    #menu-checkbox-icons,
+    .humburger-icon,
+    .humburger-icon-opened{
+        display: none;
+
+    }
+    nav a{
+        max-width:max-content;
+    }
+    /* Home page */
+    .logo{
+        width: 120px;
+    }
+
+
+
+}
+@media (min-width:1200px){
+    /* Home page */
+    .hero-section{
+        min-height: 800px;
+    }
+    .explore-card{
+        max-width: 30%;
+    }
+    /* Programs-page */
+    .program-card{
+        max-width: 95%;
+        flex-direction: row;
+        gap: unset;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .program-card-image{
+        width: 30%;
+        border-radius: 16px 16px 0px 16px;
+
+    }
+    .program-card-text{
+        align-items: flex-start;
+        max-width: 40%;
+    }
+    .button-ver-2{
+        align-self: flex-end;
+        margin: 0px 8px 8px 0px;
+}
+    .program-card-image h4{
+    padding: 8px 8px;
+    border-radius: 0 8px 0 8px;
+}
+
+    /* Cosmology page */
+
+    .program-content{
+        margin-bottom: 778px;
+
+    }
+    .program-content-image{
+        top: 650px;
+        left: 300px;
+    }
+
+
+
+
+
+}
+
+
+@media (min-width:1440px){
+
+    .nav-container{
+        max-width:1440px;
+        margin:0 auto;
+    }
+    main{
+        max-width: 1440px;
+        margin:0 auto;
+    }
+
+    /* Cosmology page */
+
+    .program-content{
+        margin-bottom: 828px;
+
+    }
+    .program-content-image{
+        top: 700px;
+        left: 300px;
+    }
+
+}
+
+@media (min-width:1920px){
+
+    .nav-container{
+        max-width:1920px;
+        margin:0 auto;
+    }
+    main{
+        max-width: 1920px;
+        margin:0 auto;
+    }
+
+    /* Cosmology page */
+
+    .program-content{
+        margin-bottom: 978px;
+
+    }
+    .program-content-image{
+        top: 850px;
+        left: 400px;
+    }
+
+}
