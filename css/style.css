@@ -15,8 +15,8 @@
     --white: #FFFFFF;
     --background-white:#F5F5F5;
     --red: #D72638;
-    --blue-gradient: linear-gradient(90deg,#1F66FF,#00277A);
     --black: #050505;
+    --blue-gradient: linear-gradient(90deg,#1F66FF,#00277A);
 }
 html,
 body {
@@ -51,6 +51,7 @@ footer{
     align-items:center;
     background-color: var(--black);
     color: var(--white);
+    padding: 0 10%;
 
 }
 .footer-logo{
@@ -62,11 +63,18 @@ footer{
     font-weight: 900;
     color: var(--white);
     /* display: block; */
-    width: 10ch;
+    /* width: 10ch; */
     transition: all 0.3s ease 0s;
 }
 footer a:hover{
     color: var(--resolution-blue);
+}
+.footer-nav{
+    gap: 24px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 
@@ -81,12 +89,13 @@ header{
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
-    height: 35vh;
+    height: 800px;
+    margin-bottom: 64px;
 }
 header h1{
     color: var(--white);
     text-align: center;
-    padding: 150px 0;
+    padding: 100px 0;
 
 }
 
