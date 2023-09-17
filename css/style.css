@@ -1,4 +1,8 @@
-
+/* Global config */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
 *, *::before, *::after {
     margin:0 ;
     padding:0 ;
@@ -38,51 +42,24 @@ p{
 a {
     text-decoration: none;
 }
+.button{
+    background-color: var(--neon-blue);
+    color: var(--white);
+    padding: 16px 24px;
+    border-radius: 12px;
+
+}
 
 
+/* Header */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
 .logo{
     width: 100px;
     margin-left: 20%;
 }
-
-footer{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background-color: var(--black);
-    color: var(--white);
-    padding: 0 10%;
-
-}
-.footer-logo{
-    max-width:100px;
-}
-
- footer a {
-    font-size: calc(15px + 0.590625vw);
-    font-weight: 900;
-    color: var(--white);
-    /* display: block; */
-    /* width: 10ch; */
-    transition: all 0.3s ease 0s;
-}
-footer a:hover{
-    color: var(--resolution-blue);
-}
-.footer-nav{
-    gap: 24px;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-
-
-
-
-
-
 
 header{
     background-image: url("../images/software-developer.jpg");
@@ -167,6 +144,138 @@ nav a:hover{
 
 #menu-checkbox:checked ~  #menu-checkbox-icons .humburger-icon-opened {
     display: block;
+}
+
+
+/* Latest Articles */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+
+.latest-articles{
+    /* border: 1px solid black; */
+    margin: 120px 60px;
+    display:flex;
+    justify-content: space-between;
+    gap: 60px 0;
+    flex-flow: row wrap;
+
+
+}
+.latest-articles-card{
+    width: 32%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px 0;
+    background-color: var(--white);
+
+}
+.latest-articles-card img{
+    max-width: 100%;
+}
+
+/* Shortcut-to-About */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+
+.shortcut-to-about{
+    border: 1px solid black;
+    background-image: url("../images/computer-4795762.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    height: 600px;
+    color:var(--white);
+    margin-bottom: 120px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    padding: 0 120px;
+
+
+}
+.shortcut-to-about div{
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    gap: 24px 0;
+
+
+}
+.shortcut-to-about p{
+    max-width: 30ch;
+
+}
+/* Shortcut-to-Contact */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+
+.shortcut-to-contact{
+    display: flex;
+    border: 1px solid black;
+
+}
+.shorcut-to-contact div{
+    width:30%;
+}
+.shorc
+
+.first-pic{
+    background-image: url("../images/person-holds-up-a-cell-phone-hiding-their-face.jpg");
+
+}
+.second-pic{
+    background-image: url(../images/smartphone-1894723.jpg);
+
+}
+
+
+/* footer */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+
+footer{
+    height: 400px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0 10%;
+
+}
+.footer-logo{
+    max-width:100px;
+}
+
+ footer a {
+    font-size: calc(15px + 0.590625vw);
+    font-weight: 900;
+    color: var(--white);
+    /* display: block; */
+    /* width: 10ch; */
+    transition: all 0.3s ease 0s;
+}
+footer a:hover{
+    color: var(--resolution-blue);
+}
+.footer-nav{
+    gap: 24px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 
@@ -312,7 +421,7 @@ nav a:hover{
         margin:0 auto;
     }
     main{
-        max-width: 1920px;
+        max-width: 100%;
         margin:0 auto;
     }
 
