@@ -221,20 +221,36 @@ nav a:hover{
 
 .shortcut-to-contact{
     display: flex;
-    border: 1px solid black;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 
 }
-.shorcut-to-contact div{
-    width:30%;
+.shortcut-to-contact-text {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px 0;
+
 }
-.shorc
+.shortcut-to-contact div {
+    width: 30%;
+    height: 600px;
+}
 
 .first-pic{
     background-image: url("../images/person-holds-up-a-cell-phone-hiding-their-face.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
 
 }
 .second-pic{
     background-image: url(../images/smartphone-1894723.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid black;
 
 }
 
@@ -246,6 +262,7 @@ nav a:hover{
 /***************************************/
 
 footer{
+    margin-top: 120px;
     height: 400px;
     display:flex;
     justify-content:space-between;
@@ -253,7 +270,6 @@ footer{
     background-color: var(--black);
     color: var(--white);
     padding: 0 10%;
-
 }
 .footer-logo{
     max-width:100px;
