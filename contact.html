@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>THE Tech Blog | HOME</title>
+    <meta name="description" content="Home page for The Tech Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/4e8a023386.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="contact-page-header">
+        <div class="nav-container">
+            <a href="index.html"><img class="logo" src="./images/logo_white.png" alt="logo for the tech lab" /></a>
+            <input type="checkbox" id="menu-checkbox" />
+            <label for="menu-checkbox" id="menu-checkbox-icons" aria-label=" humburger menu">
+                <i class="fa-light fa-bars humburger-icon"></i>
+                <i class="fa-light fa-xmark humburger-icon-opened"></i>
+            </label>
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="blog.html">BLOG</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html" class="active">CONTACT</a>
+            </nav>
+        </div>
+        <h1>CONTACT US</h1>
+    </header>
+    <main>
+        <section class="contact-page-upper">
+            <div class="contact-form-container">
+                <form action="action_page.php">
+
+                    <!-- <label for="name">Your name</label> -->
+                    <input type="text" id="name" name="name" placeholder="Your name..">
+
+                    <!-- <label for="email">Email</label> -->
+                    <input type="text" id="email" name="email" placeholder="Email Adress">
+                    <!-- <label for="subject">Subject</label> -->
+                    <input type="text" id="subject" name="subject" placeholder="Subject">
+
+                    <!-- <label for="message">Message</label> -->
+                    <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
+
+                    <input type="submit" value="Submit" class="button">
+
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div>
+                    <h3>ADDRESS</h3>
+                    <p>Brattholmnest 1500, 6277 Brattvåg, Norawy</p>
+                </div>
+                <div>
+                    <h3>EMAIL US</h3>
+                    <p>techbloh@dakwa.net</p>
+                </div>
+                <div>
+                    <h3>CALL US</h3>
+                    <p>997799-70-4331</p>
+                </div>
+                <div>
+                    <h3>FOLLOW US</h3>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-square-youtube"></i>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html" class="active">HOME</a>
+            <a href="blog.html">BLOG</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="about.html">ABOUT</a>
+        </div>
+        <a href="index.html"><img class="footer-logo" src="./images/logo_blue.png" alt="logo for the tech blog" /></a>
+        <p>Copyright © 2023 <a href="index.html" class="active">Tech BLOG</a></p>
+
+    </footer>
+</body>
+
+</html>
