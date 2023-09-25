@@ -84,6 +84,9 @@ header h1{
     background-image: none;
     position: relative;
     &::before{
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position: center;
         content:"";
         background-image: url("../images/laptop-2557615.jpg");
         position: absolute;
@@ -136,6 +139,20 @@ header h1{
         z-index: -1;
 
 }
+
+}
+#single-blog-page-header{
+    position: sticky;
+    background-image: none;
+    background-color: var(--white);
+    height: max-content;
+    border-bottom: 6px solid var(--neon-blue);
+    margin-bottom: 120px;
+
+}
+
+nav.single-blog-nav a{
+    color: var(--black) ;
 }
 
 .nav-container{
@@ -147,7 +164,7 @@ header h1{
     top:0px;
 }
 
-.active{
+#active{
     color: var(--red);
 }
 
@@ -194,8 +211,10 @@ nav a:hover{
     align-items:center;
     gap: 24px;
     top:138px;
+    /* top:0px; */
     padding-bottom: 16px;
     width:100%;
+    backdrop-filter: blur(20px);
 
 }
 
@@ -216,7 +235,7 @@ nav a:hover{
 
 .latest-articles{
     /* border: 1px solid black; */
-    margin: 120px 60px;
+    margin: 120px 16px;
     display:flex;
     justify-content: space-between;
     gap: 60px 0;
@@ -225,7 +244,7 @@ nav a:hover{
 
 }
 .latest-articles-card{
-    width: 32%;
+    width: 100%;
     /* border: 1px solid black; */
     display: flex;
     align-items: flex-start;
@@ -236,6 +255,14 @@ nav a:hover{
 }
 .latest-articles-card img{
     max-width: 100%;
+}
+.latest-articles-card h5,
+.latest-articles-card p,
+.latest-articles-card button{
+    margin: 0 0 0px 16px;
+}
+.latest-articles-card button{
+    margin-bottom: 16px;
 }
 
 /* Shortcut-to-About */
@@ -253,7 +280,7 @@ nav a:hover{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items:flex-end;
+    align-items:center;
     padding: 0 120px;
     &::before{
         content: "";
@@ -266,7 +293,7 @@ nav a:hover{
         bottom: 0px;
         left: 0px;
         right: 0px;
-        filter: brightness(40%);
+        filter: brightness(30%);
 
     }
 
@@ -293,11 +320,12 @@ nav a:hover{
 /***************************************/
 
 .shortcut-to-contact{
-    max-width:80%;
+    max-width:90%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     margin: 0 auto;
+    gap: 32px 0;
 
 }
 .shortcut-to-contact-text {
@@ -306,11 +334,14 @@ nav a:hover{
     justify-content: center;
     align-items: flex-start;
     gap: 32px 0;
+    padding: 8px;
 
 }
 .shortcut-to-contact div {
-    width: 25%;
+    width: 100%;
     height: 500px;
+    background-color: var(--white);
+    border-radius: 16px;
 }
 
 .first-pic{
@@ -338,6 +369,7 @@ footer{
     margin-top: 120px;
     height: 400px;
     display:flex;
+    flex-direction: column;
     justify-content:space-between;
     align-items:center;
     background-color: var(--black);
@@ -360,15 +392,19 @@ footer a:hover{
     color: var(--resolution-blue);
 }
 .footer-nav{
+    margin-top: 32px;
     gap: 24px;
     display:flex;
     justify-content: space-between;
     align-items: center;
 
 }
+footer p{
+    margin-bottom: 32px;
+}
 
 
-/* Blog-Page */
+/* Blog */
 /***************************************/
 /***************************************/
 /***************************************/
@@ -383,17 +419,22 @@ footer a:hover{
 }
 .article-card{
     display:flex;
+    flex-direction: column;
     justify-content: space-between;
     background-color: var(--white);
     border-bottom: 6px solid var(--neon-blue);
     padding-bottom: 20px;
+    position: relative;
+}
+.article-card:hover {
+    filter: brightness(97%)
 }
 .article-card img{
-    max-width: 40%;
+    max-width: 100%;
     border-radius: 20px;
 }
 .article-card div{
-    max-width: 58%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -402,6 +443,55 @@ footer a:hover{
 
 
 }
+.link{
+    position: absolute;
+    height:100%;
+    width: 100%;
+    left:0;
+    top:0;
+    z-index: 1;
+}
+
+
+
+
+
+/* Blog-Page */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+.single-blog-container{
+    background-color: var(--white);
+    max-width: 80%;
+    margin: 120px auto;
+    border: 1px solid black;
+    display: flex;
+    flex-direction:column;
+    /* align-items: center; */
+    gap: 64px 0;
+    padding:64px 0;
+}
+.single-blog-container *{
+    width:80%;
+    margin: 0 auto;
+
+}
+.single-blog-container h3{
+    font-size: var(--responsive-fonts-big);
+}
+.single-blog-container p{
+    /* align-self: flex-start; */
+    /* max-width: 70ch; */
+    border: 1px solid black;
+    white-space: pre-wrap;
+    max-width: 60ch;
+    line-height:1.6;
+}
+
+
+
+
 
 
 /* About-Page */
@@ -418,18 +508,19 @@ footer a:hover{
 }
 .about-card{
     display:flex;
+    flex-direction: column;
     gap: 0 60px;
 
 
 }
 .about-card img{
-    max-width: 60%;
+    max-width: 100%;
 
 }
 .about-card-text{
     display: flex;
     flex-direction: column;
-    gap: 60px 0;
+    gap: 12px 0;
 
 }
 
@@ -441,16 +532,17 @@ footer a:hover{
 /***************************************/
 .contact-page-upper{
     display:flex;
+    flex-wrap: wrap;
     max-width: 80%;
     justify-content:center;
-    gap: 0px 60px;
+    gap: 120px 0;
     margin: 0 auto;
 
 
 
 }
 .contact-page-upper > div{
-    width: 50%;
+    width: 100%;
     /* border: 1px solid black; */
 }
 
@@ -540,11 +632,170 @@ input[type=submit]{
     .logo{
         width: 120px;
     }
+    /* Latest Articles */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+
+    .latest-articles-card{
+        width: 48%;
+    }
+
+
+
+
+
+/* Blog */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+
+.articles{
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.article-card{
+    flex-direction: row;
+}
+.article-card:hover {
+    filter: brightness(97%)
+}
+.article-card img{
+    max-width: 40%;
+}
+.article-card div{
+    max-width: 58%;
+
+
+}
+
+
+
+
+
+    /* About-Page */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+.about-card{
+    flex-direction: row;
+
+}
+.about-card img{
+    max-width: 60%;
+
+}
+.about-card-text{
+    gap: 60px 0;
+
+}
+
+
+
+
+/* Contact-Page */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+.contact-page-upper{
+    flex-wrap: nowrap;
+    gap: 0px 60px;
+    margin: 0 auto;
+
+
+
+}
+.contact-page-upper > div{
+    width: 50%;
+    /* border: 1px solid black; */
+}
+
+
+
+
+
 
 
 
 }
 @media (min-width:1200px){
+
+
+
+
+/* Shortcut-to-About */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+
+.shortcut-to-about{
+    align-items:flex-end;
+}
+.shortcut-to-about p{
+    max-width: 40ch;
+
+}
+
+
+
+
+/* Shortcut-to-Contact */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+
+.shortcut-to-contact{
+    max-width:100%;
+
+}
+.shortcut-to-contact-text {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px 0;
+
+}
+.shortcut-to-contact div {
+    width: 31%;
+}
+
+
+
+
+
+/* footer */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+
+footer{
+    flex-direction: row;
+}
+
+.footer-nav{
+    margin-top: 0px;
+
+}
+footer p {
+    /* padding-top: 16px; */
+    margin: 0;
+    padding-bottom: 16px;
+
+    /* border: 1px solid white; */
+
+}
+
 
 
 }
@@ -553,13 +804,25 @@ input[type=submit]{
 @media (min-width:1440px){
 
     .nav-container{
-        max-width:1440px;
+        max-width:100%;
         margin:0 auto;
     }
     main{
-        max-width: 1440px;
+        max-width: 100%;
         margin:0 auto;
     }
+
+
+    /* Latest Articles */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+
+    .latest-articles-card{
+        width:32%;
+    }
+
 
 }
 
@@ -572,7 +835,7 @@ input[type=submit]{
         margin:0 auto;
     }
     main{
-        max-width: 100%;
+        max-width: 1920px;
         margin:0 auto;
     }
     .shortcut-to-about{
