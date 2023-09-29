@@ -1,9 +1,10 @@
-
-url = "https://dakwa.net/wp-json/wp/v2/posts?_embed"
+import {renderPosts} from "./ui/renderPost.js"
+const url = "https://dakwa.net/wp-json/wp/v2/posts?_embed"
+const allPostUrl = url + "&per_page=20"
 
 const blogsContainer = document.querySelector(".articles")
 
-async function getPosts() {
+async function getPosts(url) {
   try {
     const response = await fetch(url);
     const data = await response.json();
@@ -17,28 +18,17 @@ async function getPosts() {
   }
 }
 
-function renderPosts(posts) {
-  posts.forEach(function (post) {
-    blogsContainer.innerHTML += `
-            <div class="article-card">
-                <img src=${post._embedded["wp:featuredmedia"][0].source_url} alt="Article image" />
-                <div>
 
-                    <h3>${post.title.rendered}</h3>
-                    <p id="active">September 3, 2023</p>
-                    <p class="no-links">${post.excerpt.rendered}</p>
-                    <a href="" aria-label=""><span
-                            class="link"></span></a>
-                </div>
-            </div>
+getPosts(url);
 
-
-`
-
-
-
-  })
+const viewMoreLink = document.querySelector(".view-more");
+console.log(viewMoreLink)
+viewMoreLink.onclick = function(){
+  getPosts(allPostUrl)
+  console.log("from function")
 
 }
 
-getPosts(url);
+const images = document.querySelectorAll("img");
+console.log(images);
+

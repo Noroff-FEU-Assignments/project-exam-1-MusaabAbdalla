@@ -26,6 +26,8 @@ html,
 body {
     font-size: var(--responsive-fonts);
     width: 100%;
+    /* overflow: hidden; */
+
 }
 body {
     background: var(--background-white) ;
@@ -53,6 +55,46 @@ a {
 }
 .button:hover{
     background-color: var(--resolution-blue);
+}
+
+
+.loader {
+    width: 80px;
+    height: 80px;
+    border: 5px solid lightgray;
+    border-bottom-color: var(--resolution-blue);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1.5s linear infinite;
+    margin : 0 auto;
+    }
+
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }
+
+#fs-image {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* height:100%; */
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  cursor:zoom-out;
+
 }
 
 
@@ -233,6 +275,10 @@ nav a:hover{
 /***************************************/
 /***************************************/
 
+.latest-articles-container {
+    position: relative;
+    margin: 120px auto;
+}
 .latest-articles{
     /* border: 1px solid black; */
     margin: 120px 16px;
@@ -247,6 +293,7 @@ nav a:hover{
     width: 100%;
     /* border: 1px solid black; */
     display: flex;
+    justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
     gap: 24px 0;
@@ -254,16 +301,38 @@ nav a:hover{
 
 }
 .latest-articles-card img{
-    max-width: 100%;
+    width: 100%;
+    height: 400px;
 }
-.latest-articles-card h5,
+.latest-articles-card h4,
 .latest-articles-card p,
-.latest-articles-card button{
+.latest-articles-card .button{
     margin: 0 0 0px 16px;
 }
-.latest-articles-card button{
+.latest-articles-card .button{
     margin-bottom: 16px;
 }
+
+.carousel-button{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 50%;
+    color: var(--white);
+    background: var(--neon-blue);
+    font-size: 2.2rem ;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    /* transform: translateY(50%); */
+
+}
+
+.carousel-button:hover{
+    background: var(--resolution-blue);
+}
+
+
 
 /* Shortcut-to-About */
 /***************************************/
@@ -452,6 +521,7 @@ footer p{
     z-index: 1;
 }
 .no-links a{
+    display:none;
 
 }
 
@@ -468,28 +538,39 @@ footer p{
     background-color: var(--white);
     max-width: 80%;
     margin: 120px auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction:column;
     /* align-items: center; */
     gap: 64px 0;
     padding:64px 0;
 }
-.single-blog-container *{
-    width:80%;
-    margin: 0 auto;
+/* .single-blog-container *{ */
+/*     width:80%; */
+/*     margin: 0 auto; */
 
+/* } */
+.single-blog-container img{
+    width:90%;
+    margin: 0 auto;
+}
+.single-blog-container img:hover{
+    cursor: nesw-resize;
 }
 .single-blog-container h3{
     font-size: var(--responsive-fonts-big);
+    width:80%;
+    margin: 0 auto;
 }
-.single-blog-container p{
+.single-blog-container p,
+.single-blog-container li{
     /* align-self: flex-start; */
     /* max-width: 70ch; */
-    border: 1px solid black;
-    white-space: pre-wrap;
-    max-width: 60ch;
+    /* border: 1px solid black; */
+    /* white-space: pre-wrap; */
+    max-width: 70ch;
     line-height:1.6;
+    margin:0px 0px 26px 10%;
 }
 
 
@@ -579,6 +660,13 @@ input[type=submit]{
     color: var(--neon-blue);
 }
 .contact-info h3{
+    margin-bottom: 16px;
+}
+
+.form-error {
+    display: none;
+    color: var(--red);
+    font-size: 0.9rem;
     margin-bottom: 16px;
 }
 
@@ -822,10 +910,27 @@ footer p {
 /***************************************/
 /***************************************/
 
+
+
+
+.latest-articles{
+    max-width: 100%;
+    margin: 0 auto;
+
+
+}
+
     .latest-articles-card{
         width:32%;
     }
 
+#prev-articles {
+    left: -0%;
+    border:2px solid black;
+}
+#next-articles{
+    right: -0px;
+}
 
 }
 

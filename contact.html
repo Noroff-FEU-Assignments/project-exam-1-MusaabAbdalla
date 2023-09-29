@@ -7,6 +7,7 @@
     <meta name="description" content="Home page for The Tech Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="./images/logo_blue.png">
     <script src="https://kit.fontawesome.com/4e8a023386.js" crossorigin="anonymous"></script>
 </head>
 
@@ -31,18 +32,22 @@
     <main>
         <section class="contact-page-upper">
             <div class="contact-form-container">
-                <form action="action_page.php">
+                <form action="action_page.php" id="contact-form">
 
                     <!-- <label for="name">Your name</label> -->
                     <input type="text" id="name" name="name" placeholder="Your name..">
+                    <div class="form-error" id="nameError">Your name must be at least 5 characters</div>
 
                     <!-- <label for="email">Email</label> -->
                     <input type="text" id="email" name="email" placeholder="Email Adress">
+                    <div class="form-error" id="emailError">Please enter valid email address </div>
                     <!-- <label for="subject">Subject</label> -->
                     <input type="text" id="subject" name="subject" placeholder="Subject">
+                    <div class="form-error" id="subjectError">Your subject should be more than 15 characters long</div>
 
                     <!-- <label for="message">Message</label> -->
                     <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
+                    <div class="form-error" id="messageError">Your Message should be more than 25 characters long</div>
 
                     <input type="submit" value="Submit" class="button">
 
@@ -71,6 +76,7 @@
 
             </div>
         </section>
+    <script src="./js/contact.js" type="module"></script>
     </main>
     <footer>
         <div class="footer-nav">
