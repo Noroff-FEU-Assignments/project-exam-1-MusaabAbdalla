@@ -542,8 +542,17 @@ footer p{
 
 }
 .view-more{
+    display:block;
     max-width:90%;
-    margin: 16px auto;
+    margin: 24px auto;
+    color: var(--neon-blue);
+}
+.view-more:hover{
+    color:var(--resolution-blue);
+}
+
+.view-more:active{
+    display:var(--neon-blue);
 }
 
 
@@ -716,8 +725,19 @@ input[type=submit]{
     .nav-container {
         justify-content: space-between;
         gap: 15%;
+        /* padding: 16px 16px 160px 0px; */
+        margin-right:24px;
 
     }
+
+/* .nav-container{ */
+/*     position: relative; */
+/*     display:flex; */
+/*     justify-content:space-between; */
+/*     align-items: center; */
+/*     padding: 16px 0px; */
+/*     top:0px; */
+/* } */
 
     #menu-checkbox:checked ~ .humburger-icon-opened {
         display:none;
@@ -779,7 +799,6 @@ input[type=submit]{
 
 
 /* Blog */
-/***************************************/
 /***************************************/
 /***************************************/
 /***************************************/
@@ -937,7 +956,7 @@ footer p {
 
     .nav-container{
         max-width:100%;
-        margin:0 auto;
+        margin-right:24px;
     }
     main{
         max-width: 100%;
@@ -982,10 +1001,12 @@ footer p {
 
     .nav-container{
         max-width:1920px;
-        margin:0 auto;
+        margin-right:24px;
     }
+
+
     main{
-        max-width: 1920px;
+        max-width: 90%;
         margin:0 auto;
     }
     .shortcut-to-about{
