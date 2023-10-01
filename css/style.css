@@ -116,6 +116,7 @@ header{
     background-position: center;
     height: 800px;
     margin-bottom: 64px;
+
 }
 header h1{
     font-size: var(--responsive-fonts-big);
@@ -144,6 +145,7 @@ header h1{
         left: 0px;
         filter: brightness(40%);
         z-index: -1;
+        background-color: var(--black);
 
     }
 }
@@ -164,6 +166,7 @@ header h1{
         left: 0px;
         filter: brightness(70%);
         z-index: -1;
+        background-color: var(--black);
 
 }
 }
@@ -185,6 +188,7 @@ header h1{
         left: 0px;
         filter: brightness(70%);
         z-index: -1;
+        background-color: var(--black);
 
 }
 
