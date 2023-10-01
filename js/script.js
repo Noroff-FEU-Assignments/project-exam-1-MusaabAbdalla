@@ -53,7 +53,6 @@ nextButton.onclick = function(){
 }
 
 prevButton.onclick = function(){
-  console.log("hello")
   page_number = 1;
   const prevUrl = url + "&per_page=6" + `&page=${page_number}`
   getPosts(prevUrl);

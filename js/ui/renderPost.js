@@ -4,7 +4,7 @@ export function renderPosts(posts) {
     posts.forEach(function (post) {
         blogsContainer.innerHTML += `
             <div class="article-card">
-                <img src=${post._embedded["wp:featuredmedia"][0].source_url} alt="Article image" />
+                <img src=${post._embedded["wp:featuredmedia"][0].source_url} alt=${post.title.rendered} />
                 <div>
 
                     <h3>${post.title.rendered}</h3>
