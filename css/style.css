@@ -31,15 +31,15 @@ body {
 }
 body {
     background: var(--background-white) ;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 }
 h1 {
     font-size: var(--responsive-fonts-big);
 }
 p{
-    font-family: 'PT Sans', sans-serif;
     font-weight: 300;
+    font-family: 'Noto Sans', sans-serif;
 }
 a {
     text-decoration: none;
