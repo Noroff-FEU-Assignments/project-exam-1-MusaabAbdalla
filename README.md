@@ -27,9 +27,8 @@ git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-MusaabAbdalla
 If you would like to contribute to this project, please fork the repository and open a Pull Request with your changes
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
 
-[My Twitter page](www.twitter.com)
+[My Twitter page](https://twitter.com/jamboosan)
 
 [My LinkedIn page](www.linkedin.com)
 
