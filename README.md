@@ -1,6 +1,5 @@
 # The Tech Blog
-
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![the_tech_blog](https://github.com/Noroff-FEU-Assignments/project-exam-1-MusaabAbdalla/assets/119439375/26ecce3f-de4a-47ab-a32b-b1c2a3f11726)
 
 A simple overview of the use/purpose of the project.
 
